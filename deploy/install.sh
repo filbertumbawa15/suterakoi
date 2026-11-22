@@ -117,7 +117,7 @@ server {
     location ^~ /assets/     { expires 7d; }
 
     location / {
-        try_files \$uri \$uri/ =404;
+        try_files \$uri \$uri.html \$uri/ =404;
     }
 
     error_page 404 /404.html;

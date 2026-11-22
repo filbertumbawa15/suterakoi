@@ -39,7 +39,7 @@
   // Navigasi berubah warna setelah melewati kolam
   var nav = document.querySelector(".nav");
   var hero = document.getElementById("pond");
-  function navState() { nav.classList.toggle("is-light", hero.getBoundingClientRect().bottom < 80); }
+  function navState() { nav.classList.toggle("is-light", !hero || hero.getBoundingClientRect().bottom < 80); }
   window.addEventListener("scroll", navState, { passive: true });
   navState();
 
@@ -47,8 +47,11 @@
   (function pond() {
     var school = document.getElementById("school");
     var ripples = document.getElementById("ripples");
+    if (!hero || !school) return;
     var small = window.innerWidth < 700;
     var kinds = small ? ["kohaku", "showa", "ogon"] : ["kohaku", "showa", "ogon", "sanke", "tancho", "kohaku"];
+    var max = parseInt(school.getAttribute("data-count"), 10);
+    if (max) kinds = kinds.slice(0, Math.min(max, kinds.length));
     var W = 0, H = 0;
     var pointer = { x: 0, y: 0, t: -1e9 };
     var fish = [];
@@ -141,6 +144,7 @@
     var note = document.getElementById("auction-note");
     var cta = document.getElementById("auction-cta");
     var box = document.getElementById("countdown");
+    if (!box) return;
     title.textContent = L.judul || "Lelang Sutera Koi berikutnya";
     external(cta, L.link || igUrl);
     if (!L.link) cta.textContent = "Pantau jadwal di Instagram";
@@ -212,9 +216,11 @@
       "<dl>" + metaRows(k) + "</dl>" + action + "</div></li>";
   }
 
+  var limit = list ? parseInt(list.getAttribute("data-limit"), 10) : 0;
   function render() {
     var shown = items.filter(function (k) { return active === "Semua" || k.varietas === active; });
-    var mode = sortSel.value;
+    if (limit) shown = shown.filter(function (k) { return !isSold(k); }).slice(0, limit);
+    var mode = sortSel ? sortSel.value : "default";
     if (mode !== "default") {
       shown = shown.slice().sort(function (a, b) { return mode === "besar" ? b.ukuran_cm - a.ukuran_cm : a.ukuran_cm - b.ukuran_cm; });
     }
@@ -223,6 +229,7 @@
   }
 
   function buildFilters() {
+    if (!filters) return;
     var names = ["Semua"];
     items.forEach(function (k) { if (names.indexOf(k.varietas) < 0) names.push(k.varietas); });
     filters.innerHTML = names.map(function (n) {
@@ -238,6 +245,7 @@
   }
 
   function featured() {
+    if (!document.getElementById("unggulan")) return;
     var k = items.filter(function (x) { return x.unggulan && !isSold(x); })[0];
     if (!k) return;
     document.getElementById("feat-pic").innerHTML = picture(k);
@@ -248,11 +256,13 @@
     document.getElementById("unggulan").hidden = false;
   }
 
+  if (!list) return;
   fetch("data/koi.json", { cache: "no-cache" })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (data) {
       items = data.ikan || [];
-      document.getElementById("catalog-notice").hidden = !data.contoh;
+      var notice = document.getElementById("catalog-notice");
+      if (notice) notice.hidden = !data.contoh;
       featured();
       buildFilters();
       render();

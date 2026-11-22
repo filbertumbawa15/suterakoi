@@ -3,13 +3,15 @@
 Website resmi Sutera Koi (suterakoi.biz.id), dikelola oleh CV Sutera Petindo Abadi.
 Website statis: HTML, CSS dan JavaScript tanpa database, dijalankan dengan Nginx.
 
+Halaman: Beranda, Katalog, Lelang, Layanan, Tentang dan Kontak. Menu dan footer ada di setiap file halaman, jadi kalau menambah halaman baru, tambahkan juga tautannya di semua halaman.
+
 ## Mengubah isi
 
 | Yang diubah | File |
 |---|---|
 | Nomor WhatsApp, email, Instagram, alamat, jadwal lelang | `assets/js/config.js` |
 | Daftar ikan di katalog | `data/koi.json` |
-| Teks halaman | `index.html` |
+| Teks halaman | `index.html`, `katalog.html`, `lelang.html`, `layanan.html`, `tentang.html`, `kontak.html` |
 | Warna dan tampilan | `assets/css/style.css` |
 | Logo | `assets/img/logo-mark.svg` |
 
