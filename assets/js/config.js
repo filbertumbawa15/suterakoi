@@ -6,5 +6,13 @@ window.SITE = {
   instagram: "sutera.koi",
   instagramCattery: "sutera_cattery",
   alamat: "Paku Jaya, Serpong Utara, Tangerang Selatan, Banten",
-  mapsQuery: "Sutera Koi Paku Jaya Tangerang Selatan"
+  mapsQuery: "Sutera Koi Paku Jaya Tangerang Selatan",
+
+  // Lelang berikutnya. Kosongkan "mulai" bila jadwal belum ada.
+  // Format tanggal: "2026-12-06T19:00:00+07:00" (tahun-bulan-tanggal T jam WIB)
+  lelang: {
+    judul: "Lelang Sutera Koi berikutnya",
+    mulai: "",
+    link: "" // link halaman lelang, misalnya di masterkoi.bid. Kosongkan untuk mengarah ke Instagram.
+  }
 };

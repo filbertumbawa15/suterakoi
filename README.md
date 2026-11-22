@@ -7,7 +7,7 @@ Website statis: HTML, CSS dan JavaScript tanpa database, dijalankan dengan Nginx
 
 | Yang diubah | File |
 |---|---|
-| Nomor WhatsApp, email, Instagram, alamat | `assets/js/config.js` |
+| Nomor WhatsApp, email, Instagram, alamat, jadwal lelang | `assets/js/config.js` |
 | Daftar ikan di katalog | `data/koi.json` |
 | Teks halaman | `index.html` |
 | Warna dan tampilan | `assets/css/style.css` |
@@ -22,10 +22,16 @@ Tambahkan satu baris di `data/koi.json`, misalnya:
 ```
 
 - `status`: `tersedia` atau `terjual`.
+- `label`: `hot`, `baru` atau kosong.
+- `unggulan`: `true` untuk satu ikan yang tampil besar di bagian "Pilihan minggu ini".
 - `harga`: kosongkan untuk menampilkan "Tanyakan via WhatsApp".
 - `foto`: simpan foto di `assets/img/koi/`. Bila kosong, website menampilkan ilustrasi koi sesuai varietas
   (Kohaku, Showa, Sanke, Tancho, Ogon, Asagi, Shiro Utsuri, Kujaku).
 - Setelah data asli terisi, ubah `"contoh": true` menjadi `"contoh": false` supaya pemberitahuan "katalog contoh" hilang.
+
+### Jadwal lelang
+
+Isi `lelang.mulai` di `assets/js/config.js`, misalnya `"2026-12-06T19:00:00+07:00"`. Hitung mundur muncul otomatis. Isi `lelang.link` dengan halaman lelangnya, atau kosongkan untuk mengarah ke Instagram.
 
 ## Pasang di VPS (Ubuntu 24.04)
 
