@@ -1,0 +1,14 @@
+{
+  "contoh": true,
+  "catatan": "Hapus baris \"contoh\" (atau ubah jadi false) setelah daftar ikan diisi data asli. Kolom foto boleh kosong; isi dengan path seperti assets/img/koi/kohaku-34.jpg.",
+  "ikan": [
+    { "kode": "SK-001", "varietas": "Kohaku", "breeder": "Izuru Koi Farm", "ukuran_cm": 34, "umur": "2 sai", "gender": "Belum diketahui", "harga": "", "status": "tersedia", "foto": "" },
+    { "kode": "SK-002", "varietas": "Showa", "breeder": "Izuru Koi Farm", "ukuran_cm": 36, "umur": "2 sai", "gender": "Belum diketahui", "harga": "", "status": "tersedia", "foto": "" },
+    { "kode": "SK-003", "varietas": "Sanke", "breeder": "Izuru Koi Farm", "ukuran_cm": 37, "umur": "2 sai", "gender": "Belum diketahui", "harga": "", "status": "tersedia", "foto": "" },
+    { "kode": "SK-004", "varietas": "Kujaku", "breeder": "Izuru Koi Farm", "ukuran_cm": 37, "umur": "2 sai", "gender": "Belum diketahui", "harga": "", "status": "terjual", "foto": "" },
+    { "kode": "SK-005", "varietas": "Tancho", "breeder": "", "ukuran_cm": 30, "umur": "Tosai", "gender": "Belum diketahui", "harga": "", "status": "tersedia", "foto": "" },
+    { "kode": "SK-006", "varietas": "Ogon", "breeder": "", "ukuran_cm": 28, "umur": "Tosai", "gender": "Belum diketahui", "harga": "", "status": "tersedia", "foto": "" },
+    { "kode": "SK-007", "varietas": "Asagi", "breeder": "", "ukuran_cm": 40, "umur": "3 sai", "gender": "Betina", "harga": "", "status": "tersedia", "foto": "" },
+    { "kode": "SK-008", "varietas": "Shiro Utsuri", "breeder": "", "ukuran_cm": 33, "umur": "2 sai", "gender": "Belum diketahui", "harga": "", "status": "tersedia", "foto": "" }
+  ]
+}

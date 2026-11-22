@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /deploy/
+
+Sitemap: https://suterakoi.biz.id/sitemap.xml

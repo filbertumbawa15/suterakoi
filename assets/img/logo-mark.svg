@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Sutera Koi">
+  <defs>
+    <clipPath id="body">
+      <path d="M30,40 C55,22 120,16 160,24 C180,28 194,34 196,40 C194,46 180,52 160,56 C120,64 55,58 30,40 Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="#0F3D47"/>
+  <circle cx="50" cy="50" r="41" fill="none" stroke="#F6F7F4" stroke-opacity=".18" stroke-width="1"/>
+  <g transform="translate(50 52) rotate(-32) scale(.4) translate(-100 -40)">
+    <path d="M32,40 C20,28 10,22 2,18 C8,32 8,48 2,62 C10,58 20,52 32,40 Z" fill="#F6F7F4"/>
+    <path d="M150,27 C142,12 130,5 118,4 C126,13 132,22 138,29 Z" fill="#F6F7F4"/>
+    <path d="M150,53 C142,68 130,75 118,76 C126,67 132,58 138,51 Z" fill="#F6F7F4"/>
+    <path d="M30,40 C55,22 120,16 160,24 C180,28 194,34 196,40 C194,46 180,52 160,56 C120,64 55,58 30,40 Z" fill="#F6F7F4"/>
+    <circle cx="174" cy="40" r="10" fill="#C8102E"/>
+  </g>
+</svg>
